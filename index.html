@@ -4,35 +4,61 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="https://portal.telnyx.com/version-2700/assets/favicon-hHO0WXsk.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <title>FDE Setup Links</title>
   <style>
-    :root { color-scheme: light dark; }
+    :root {
+      --cream: #FEFDF5;
+      --cream-2: #F5F4ED;
+      --ink: #0d0f0e;
+      --muted: #5b615e;
+      --green: #05e3aa;
+      --green-ink: #04101; --green-ink: #043d2e;
+      --line: #e4e3d8;
+    }
+    * { box-sizing: border-box; }
     body {
       margin: 0; min-height: 100vh;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: #0b1020; color: #e8ecf5;
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--cream); color: var(--ink);
       display: flex; flex-direction: column; align-items: center;
-      padding: 48px 16px;
+      padding: 56px 16px;
     }
-    h1 { font-size: 1.6rem; font-weight: 650; margin: 0 0 4px; }
-    p.sub { margin: 0 0 32px; color: #9aa6c0; font-size: 0.95rem; }
+    .mark {
+      display: inline-flex; align-items: center; gap: 9px; margin-bottom: 22px;
+    }
+    .dot { width: 12px; height: 12px; border-radius: 50%; background: var(--green); }
+    .mark span { font-weight: 700; font-size: 1.05rem; letter-spacing: -0.01em; }
+    h1 { font-size: 1.7rem; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 6px; }
+    p.sub { margin: 0 0 34px; color: var(--muted); font-size: 0.96rem; }
     .links { width: 100%; max-width: 560px; display: flex; flex-direction: column; gap: 12px; }
     a.card {
-      display: flex; align-items: center; gap: 14px;
+      display: flex; align-items: center; gap: 15px;
       text-decoration: none; color: inherit;
-      background: #161d33; border: 1px solid #26304d; border-radius: 12px;
-      padding: 16px 18px; transition: border-color .15s, transform .05s, background .15s;
+      background: #fff; border: 1px solid var(--line); border-radius: 14px;
+      padding: 17px 19px; transition: border-color .15s, box-shadow .15s, transform .05s;
     }
-    a.card:hover { border-color: #4f7cff; background: #1b2440; }
+    a.card:hover {
+      border-color: var(--green);
+      box-shadow: 0 0 0 3px rgba(5,227,170,0.15);
+    }
     a.card:active { transform: translateY(1px); }
-    .ico { font-size: 1.4rem; width: 28px; text-align: center; }
+    .ico {
+      flex: none; width: 38px; height: 38px; border-radius: 10px;
+      background: var(--cream-2); display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem;
+    }
     .meta { display: flex; flex-direction: column; }
     .title { font-weight: 600; font-size: 1.02rem; }
-    .desc { color: #9aa6c0; font-size: 0.85rem; margin-top: 2px; }
-    footer { margin-top: 36px; color: #6b769; color: #67708a; font-size: 0.8rem; }
+    .desc { color: var(--muted); font-size: 0.85rem; margin-top: 2px; }
+    .arrow { margin-left: auto; color: var(--green); font-weight: 700; font-size: 1.1rem; }
+    footer { margin-top: 40px; color: var(--muted); font-size: 0.8rem; }
   </style>
 </head>
 <body>
+  <div class="mark"><span class="dot"></span><span>telnyx</span></div>
   <h1>FDE Setup Links</h1>
   <p class="sub">Quick links for getting set up.</p>
   <div class="links">
@@ -40,21 +66,25 @@
       <span class="ico">📦</span>
       <span class="meta"><span class="title">team-telnyx/ai repo</span>
         <span class="desc">One-stop shop for AI agents and developers building with Telnyx</span></span>
+      <span class="arrow">→</span>
     </a>
     <a class="card" href="https://telnyx.com/sign-up" target="_blank" rel="noopener">
       <span class="ico">🔑</span>
       <span class="meta"><span class="title">Telnyx sign-up</span>
         <span class="desc">Create a Telnyx account</span></span>
+      <span class="arrow">→</span>
     </a>
     <a class="card" href="https://claude.ai/login" target="_blank" rel="noopener">
       <span class="ico">🤖</span>
       <span class="meta"><span class="title">Claude sign-up</span>
         <span class="desc">Create or sign in to a Claude account</span></span>
+      <span class="arrow">→</span>
     </a>
     <a class="card" href="https://opencode.ai" target="_blank" rel="noopener">
       <span class="ico">⬇️</span>
       <span class="meta"><span class="title">OpenCode download</span>
         <span class="desc">Install the OpenCode CLI</span></span>
+      <span class="arrow">→</span>
     </a>
   </div>
   <footer>Telnyx FDE</footer>
