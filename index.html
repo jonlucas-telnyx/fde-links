@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FDE Setup Links</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      margin: 0; min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #0b1020; color: #e8ecf5;
+      display: flex; flex-direction: column; align-items: center;
+      padding: 48px 16px;
+    }
+    h1 { font-size: 1.6rem; font-weight: 650; margin: 0 0 4px; }
+    p.sub { margin: 0 0 32px; color: #9aa6c0; font-size: 0.95rem; }
+    .links { width: 100%; max-width: 560px; display: flex; flex-direction: column; gap: 12px; }
+    a.card {
+      display: flex; align-items: center; gap: 14px;
+      text-decoration: none; color: inherit;
+      background: #161d33; border: 1px solid #26304d; border-radius: 12px;
+      padding: 16px 18px; transition: border-color .15s, transform .05s, background .15s;
+    }
+    a.card:hover { border-color: #4f7cff; background: #1b2440; }
+    a.card:active { transform: translateY(1px); }
+    .ico { font-size: 1.4rem; width: 28px; text-align: center; }
+    .meta { display: flex; flex-direction: column; }
+    .title { font-weight: 600; font-size: 1.02rem; }
+    .desc { color: #9aa6c0; font-size: 0.85rem; margin-top: 2px; }
+    footer { margin-top: 36px; color: #6b769; color: #67708a; font-size: 0.8rem; }
+  </style>
+</head>
+<body>
+  <h1>FDE Setup Links</h1>
+  <p class="sub">Quick links for getting set up.</p>
+  <div class="links">
+    <a class="card" href="https://github.com/team-telnyx/ai" target="_blank" rel="noopener">
+      <span class="ico">📦</span>
+      <span class="meta"><span class="title">team-telnyx/ai repo</span>
+        <span class="desc">One-stop shop for AI agents and developers building with Telnyx</span></span>
+    </a>
+    <a class="card" href="https://telnyx.com/sign-in" target="_blank" rel="noopener">
+      <span class="ico">🔑</span>
+      <span class="meta"><span class="title">Telnyx sign-in</span>
+        <span class="desc">Log in to the Telnyx portal</span></span>
+    </a>
+    <a class="card" href="https://claude.ai/login" target="_blank" rel="noopener">
+      <span class="ico">🤖</span>
+      <span class="meta"><span class="title">Claude sign-up</span>
+        <span class="desc">Create or sign in to a Claude account</span></span>
+    </a>
+    <a class="card" href="https://opencode.ai" target="_blank" rel="noopener">
+      <span class="ico">⬇️</span>
+      <span class="meta"><span class="title">OpenCode download</span>
+        <span class="desc">Install the OpenCode CLI</span></span>
+    </a>
+    <a class="card" href="https://github.com/team-telnyx/opencode-telnyx-auth" target="_blank" rel="noopener">
+      <span class="ico">🧩</span>
+      <span class="meta"><span class="title">Telnyx OpenCode plugins</span>
+        <span class="desc">Use Telnyx inference in OpenCode</span></span>
+    </a>
+  </div>
+  <footer>Telnyx FDE</footer>
+</body>
+</html>
